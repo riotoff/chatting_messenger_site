@@ -1,0 +1,162 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Навигационное меню */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.brand {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu li a:hover {
+    color: #4CAF50;
+}
+
+/* Главная секция */
+#hero {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.left-side {
+    text-align: left;
+    max-width: 600px;
+    margin-right: 80px; /* Увеличенный отступ между левой и правой частями */
+}
+
+.right-side {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.cta-container {
+    display: flex;
+    gap: 16px; /* Отступ между кнопками */
+    margin-top: 30px;
+}
+
+.btn-download {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.btn-download:hover {
+    background-color: #45A049;
+}
+
+.messenger-image {
+    width: 400px;
+    animation: fadeInRight 1s ease forwards; /* Новая анимация для изображения */
+}
+
+/* Остальные секции */
+#features,
+#download,
+#contact {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#features h2,
+#download h2,
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Футер */
+footer {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Анимации */
+html {
+    scroll-behavior: smooth;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Новая анимация для изображения */
+@keyframes fadeInRight {
+    from { 
+        opacity: 0;
+        transform: translateX(50px); 
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
