@@ -1,2 +1,3 @@
-# chatting_messenger_site
-Site of Chatting messenger.
+# Chatting Messenger Website
+
+Open Source of Chatting Messenger Site
